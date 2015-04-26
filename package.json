@@ -9,6 +9,9 @@
   "author": "Zachary Stoltz",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.12.3"
+    "body-parser": "^1.12.3",
+    "bootstrap": "^3.3.4",
+    "express": "^4.12.3",
+    "gulp": "^3.8.11"
   }
 }
