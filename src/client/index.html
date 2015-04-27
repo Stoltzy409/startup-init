@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="app">
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="./vendor/toastr/toastr.css" />
-    <link rel="stylesheet" href="./style/compiled/app.css" />
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="./vendor/toastr/toastr.css" />
+  <link rel="stylesheet" href="./style/compiled/app.css" />
+  <base href="/">
 </head>
 <body>
-    <h1>Hello World</h1>
+  <div ng-include="'app/layout/login.html'"></div>
+  <div ng-view=""></div>
+
+
 
 <script src="/src/client/vendor/jquery/dist/jquery.js"></script>
 <script src="/src/client/vendor/toastr/toastr.js"></script>
 <script src="/src/client/vendor/angular/angular.js"></script>
 <script src="/src/client/vendor/angular-resource/angular-resource.js"></script>
 <script src="/src/client/vendor/angular-route/angular-route.js"></script>
+<script src="/src/client/vendor/angular-bootstrap/ui-bootstrap.js"></script>
+
+<script src="/src/client/app/app.module.js"></script>
+
+<script src="/src/client/app/layout/layout.module.js"></script>
+
+<script src="/src/client/app/dashboard/dashboard.module.js"></script>
+<script src="/src/client/app/dashboard/dashboard.route.js"></script>
+<script src="/src/client/app/dashboard/dashboard.js"></script>
+
+<script src="/src/client/app/registration/registration.module.js"></script>
+<script src="/src/client/app/registration/registrationCtrl.js"></script>
+
 </body>
 </html>
