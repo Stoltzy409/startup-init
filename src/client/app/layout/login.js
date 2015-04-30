@@ -1,10 +1,26 @@
 (function () {
   'use strict';
-  angular.module('app.layout').controller('loginCtrl', function () {
+  angular.module('app.layout').controller('loginCtrl', function ($log) {
     var vm = this;
-    vm.login = function (username, password) {
-      console.log("Logging out Login stub" + username + password);
+
+    vm.status = {
+      isopen: false
     };
+
+    vm.toggled = function (open) {
+      $log.log('Dropdown is now: ', open);
+    };
+
+    vm.stopProp = function ($event) {
+      //$event.preventDefault();
+      $event.stopPropagation();
+    };
+
+    vm.login = function ($event) {
+      console.log(vm.username + ' ' + vm.password);
+      $event.stopPropagation();
+    };
+
   });
 
 })();
