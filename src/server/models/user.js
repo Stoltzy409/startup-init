@@ -1,18 +1,32 @@
-(function(){
+(function () {
   "use strict";
   var db = require('../db');
 
-  var user = db.model('User', new db.Schema({
-    userName: {type: String, required: true},
-    hashPassword: String,
-    salt: String,
+  module.exports = db.model('User', new db.Schema({
+    userName: {
+      type: String,
+      required: true
+    },
+    password: {
+      type: String,
+      required: true
+    },
     userInfo: {
       firstName: String,
       lastName: String,
       github: String,
       website: String
-    }
-    //TODO: determine if we will need any info pertaining to Company they are with
+    },
+    accountType: [{
+        jobSeeker: {
+          type: Boolean,
+          required: true
+        },
+        company: {
+          type: Boolean,
+          required: true
+        }
+    }]
+      //TODO: determine if we will need any info pertaining to Company they are with
   }));
-  module.exports = user;
 })();

@@ -1,12 +1,16 @@
-<div class="nav">
-<div class="nav navbar pull-left navbar-brand">We Want Startups!</div>
-<div class="nav navbar pull-right">
-  <form class="navbar-form form-horizontal">
-    <input class="form-control" name="username" placeholder="Aye You"/>
-    <input class="form-control" name="password" type="password" placeholder="Password" />
-    <button class="btn btn-primary"><i class="glyphicon glyphicon-ok-circle"></i><span> Log in</span></button>
-    <a href="#" class="btn btn-link" ng-click="openRegistration()">Register</a>
-  </form>
-  <div ng-include="'app/registration/registration.html'"></div>
+<div class="nav" ng-controller="loginCtrl as vm">
+  <div class="nav navbar pull-left navbar-brand">We Want Startups!</div>
+  <div class="nav navbar pull-right">
+    <form class="navbar-form form-horizontal">
+      <div class="form-group">
+        <input ng-model="vm.username" class="form-control" name="username" placeholder="Aye You" />
+        <input ng-model="vm.password" class="form-control" name="password" type="password" placeholder="Password" />
+
+        <button type="button" class="btn btn-primary" ng-click="vm.login(vm.username, vm.password)"><i class="glyphicon glyphicon-ok-circle"></i><span> Log in</span>
+        </button>
+        <a ng-href="/registration" class="btn btn-link">Register</a>
+      </div>
+    </form>
+  </div>
 </div>
- </div>
+</div>

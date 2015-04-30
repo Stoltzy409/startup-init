@@ -12,6 +12,9 @@ console.log('About to crank up node');
 console.log('PORT=' + port);
 console.log('NODE_ENV=' + environment);
 
+//API Rest Endpoints
+app.use('/api', require('./controllers/api'));
+
 switch (environment){
     case 'build':
         console.log('** BUILD **');

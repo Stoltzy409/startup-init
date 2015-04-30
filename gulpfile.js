@@ -4,9 +4,9 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 
-
-gulp.task('less', function(){
-    console.log('Compiling Less Files');
+gulp.task('less', function () {
+  "use strict";  
+  console.log('Compiling Less Files');
 
     return gulp.src('./src/client/style/app.less')
         .pipe(less())

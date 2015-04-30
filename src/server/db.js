@@ -7,4 +7,6 @@
     "use strict";
     console.log("DB connected")
   });
+  
+  module.exports = mongoose;
 })();
