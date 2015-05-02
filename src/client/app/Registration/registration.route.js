@@ -1,5 +1,5 @@
 (function () {
-  "use strict";
+  'use strict';
   angular.module('app.registration').config(function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
 

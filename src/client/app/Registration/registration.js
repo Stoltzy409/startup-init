@@ -6,7 +6,7 @@
     var isChecked = vm.checked = false;
     vm.agree = 'glyphicon-unchecked';
     vm.agreeBtnClicked = function () {
-      vm.agree = "";
+      vm.agree = '';
       isChecked = !isChecked;
       vm.agree = isChecked ? 'glyphicon-check' : 'glyphicon-unchecked';
     };
