@@ -3,6 +3,6 @@
  */
 (function() {
     'use strict';
-    angular.module('app.dashboard', ['ngResource', 'ngRoute']);
+    angular.module('app.dashboard', ['ngRoute']);
 
 })();

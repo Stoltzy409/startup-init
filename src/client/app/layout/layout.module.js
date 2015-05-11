@@ -3,5 +3,5 @@
  */
 (function () {
   "use strict";
-  angular.module('app.layout', ['ui.bootstrap']);
+  angular.module('app.layout', ['ui.bootstrap', 'app.loading']);
 })();

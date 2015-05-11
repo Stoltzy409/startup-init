@@ -1,5 +1,5 @@
 <div class="nav" ng-controller="loginCtrl as vm">
-  <div class="nav navbar navbar-left navbar-brand">We Want Startups!</div>
+  <a class="nav navbar navbar-left navbar-brand" ng-href="/">We Want Startups!</a>
   <div class="nav navbar navbar-right">
     <!-- Login button -->
     <div class="btn-group" dropdown is-open="status.isopen">
@@ -7,18 +7,18 @@
         Login <span class="caret"></span>
       </button>
       <!-- Dropdown contents -->
-      <ul class="dropdown-menu" role="menu" style="padding: 15px;min-width: 250px;">
+      <ul class="dropdown-menu" role="menu" style="padding: 15px;min-width: 250px;" ng-click="vm.stopProp($event)">
         <li>
           <div class="row">
             <div class="col-md-12">
               <form name="loginForm" role="form" method="post" ng-submit="vm.login($event)">
                 <div class="form-group">
                   <label class="sr-only" for="username">Username</label>
-                  <input ng-model="vm.username" type="email" class="form-control" name="username" placeholder="Username" required ng-click="vm.stopProp($event)" />
+                  <input ng-model="vm.username" type="email" class="form-control" name="username" placeholder="Username" required />
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="password">Password</label>
-                  <input ng-model="vm.password" type="password" class="form-control" name="password" placeholder="Password" required ng-click="vm.stopProp($event)" />
+                  <input ng-model="vm.password" type="password" class="form-control" name="password" placeholder="Password" required />
                 </div>
                 <div class="checkbox form-group">
                   <label>

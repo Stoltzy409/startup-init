@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="containter">
+  <div class="container">
     <div ng-include="'app/layout/login.html'"></div>
     <div ng-view=""></div>
 
@@ -18,15 +18,17 @@
   </div>
   <script src="/src/client/vendor/jquery/dist/jquery.js"></script>
   <script src="/src/client/vendor/toastr/toastr.js"></script>
-  <script src="/src/client/vendor/angular/angular.js"></script>
-  <script src="/src/client/vendor/angular-resource/angular-resource.js"></script>
-  <script src="/src/client/vendor/angular-route/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular.js"></script>
+  <script src="https://code.angularjs.org/1.4.0-rc.1/angular-route.js"></script>
   <script src="/src/client/vendor/angular-bootstrap/ui-bootstrap.js"></script>
 
   <script src="/src/client/app/app.module.js"></script>
 
   <script src="/src/client/app/layout/layout.module.js"></script>
   <script src="/src/client/app/layout/login.js"></script>
+
+  <script src="/src/client/app/layout/loading/loading.module.js"></script>
+  <script src="/src/client/app/layout/loading/loading.directive.js"></script>
 
   <script src="/src/client/app/dashboard/dashboard.module.js"></script>
   <script src="/src/client/app/dashboard/dashboard.route.js"></script>
